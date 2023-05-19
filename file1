@@ -1,0 +1,22 @@
+const int motorPin1 = 2;
+const int motorPin2 = 3;
+const int enablePin = 9;
+
+void setup() {
+    pinMode(motorPin1, OUTPUT);
+    pinMode(motorPin2, OUTPUT);
+    pinMode(enablePin, OUTPUT);
+}
+
+void loop() {
+    digitalWrite(motorPin1, HIGH);
+    digitalWrite(motorPin2, LOW);
+    analogWrite(enablePin, 255);
+    delay(2000);
+
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, HIGH);
+    analogWrite(enablePin, 255);
+    delay(2000);
+}
+
